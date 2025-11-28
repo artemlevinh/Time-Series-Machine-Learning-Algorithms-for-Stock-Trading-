@@ -167,7 +167,7 @@ main.main()   # call the main() function directly
 ```
 ## 🧾 Example: Predicting the Next Price
 
-Use this snippet anywhere after training:
+Use this code to predict the next day price for your own personal use:
 
 ```python
 from random_forest_use import predict_next_price
