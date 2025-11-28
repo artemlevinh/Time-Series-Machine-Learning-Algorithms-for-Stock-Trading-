@@ -123,7 +123,7 @@ Cash Balance: 9728.71
 Stocks Owned: 15
 ```
 
-### **Plots (as shown in your screenshots)**
+### **Plots**
 
 * Prediction vs. Actual Prices
 * Feature Importance
@@ -139,6 +139,32 @@ These generated figures look like:
 
 ---
 
+Use the folloing code to display the plots:
+```python
+%matplotlib inline
+
+import matplotlib.pyplot as plt
+import importlib
+import main  # import your main.py
+
+# --- Patch plt.show() so only 1st, 3rd, 5th figures appear ---
+_original_show = plt.show
+counter = {"i": 0}
+
+def filtered_show(*args, **kwargs):
+    counter["i"] += 1
+    if counter["i"] in (1, 3, 5):
+        _original_show(*args, **kwargs)
+    else:
+        plt.close()  # hide suppressed graphs
+
+plt.show = filtered_show
+# ----------------------------------------------------------------
+
+importlib.reload(main)
+
+main.main()   # call the main() function directly
+```
 ## 🧾 Example: Predicting the Next Price
 
 Use this snippet anywhere after training:
