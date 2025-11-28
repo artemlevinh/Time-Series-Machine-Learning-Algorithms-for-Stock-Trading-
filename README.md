@@ -1,5 +1,4 @@
-```markdown
-# 📘 Stock Price Forecasting + RSI-Based Trading Simulation
+# Stock Price Forecasting + RSI-Based Trading Simulation
 
 This project trains a **time-series forecasting model** (Random Forest Regression) to predict the next-day stock price using historical price inputs.  
 After training, the system evaluates the model inside a **rule-based RSI trading strategy**, where:
@@ -14,7 +13,7 @@ The project visualizes prediction performance and trading behavior (examples sho
 
 ---
 
-## 📂 Project Structure and File Descriptions
+## Project Structure and File Descriptions
 
 ```
 
